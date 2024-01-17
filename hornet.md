@@ -20,7 +20,7 @@ theme: uncover
 
 ---
 ### State Machine
-![copy]()
+![](images/state_machine.png)
 
 ---
 ### Mavlink Routing
