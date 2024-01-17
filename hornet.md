@@ -32,7 +32,7 @@ theme: uncover
 
 ---
 ### State Machine
-![](images/state_machine.png)
+![image]()
 
 ---
 ### Mavlink Routing
