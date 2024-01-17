@@ -14,9 +14,21 @@ theme: uncover
 - New System Architecture
   - General Design
   - Control Design
-- Main Design Principles
-- Migration Process
 
+---
+# Agenda
+- Main Design Principles
+  - Setup Definition
+  - Nodes
+  - Messages
+  - Parameters
+  - Standard
+
+---
+# Agenda
+- Migration Process
+  - Home <--> Field
+  - Work Method
 
 ---
 ### State Machine
@@ -35,11 +47,40 @@ theme: uncover
 ![](images/control.drawio.png)
 
 ---
-# Migration Process
-- Field <--> Home
+### Setup Definition
+- Ubuntu22
+- RosHumble
+- DDS Vendor
 
 ---
-### Field <--> Home
+### Nodes
+- as small as possible
+- 
+
+---
+### Messages
+- as many as needed
+- use standard msgs
+
+---
+### Parameters
+
+---
+### Standard
+-  deb (dependency)
+-  docker
+-  documentation (README.md)
+-  test ?
+
+---
+### Migration Process
+Field <--------------------------------> Home
 ![](images/domains.drawio.png)
 
 ---
+### Work Method
+- Describe each cube from "General Design" in ROS orientation
+- Design each node
+- Implementation
+- Tests
+- Integration
