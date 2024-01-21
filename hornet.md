@@ -59,12 +59,13 @@ theme: uncover
 ---
 ### Setup Definition
 ##### Hardware
-- Rom Box III (Jetson Orin)
+- Rom Box III
+  - Jetson Orin
 - [New Gimbal](https://gremsy.com/gremsy-introduces-two-axis-mio-gimbal-for-drone-developers)
 - New Sensors:
   - temp, range, proximity, stereo (point cloud)
   
-![bg 30%](images/two-axis_mio_gimbal.png)
+![bg right 100%](images/two-axis_mio_gimbal.png)
 
 ---
 ### Setup Definition
