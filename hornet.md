@@ -164,3 +164,19 @@ Field <--------------------------------> Home
 ### On going migration
 - Partial test on exist system
 - Run as Payload
+
+--- 
+### Camera / Video Migration
+
+Use case to migration current implementation to ROS base
+
+- GOAL: Move all related video handle and video consumer to ROS base
+  - Support partial migration 
+- GOAL: Check Home / Vehicle networking
+- GOAL: Using KLV to streaming video and sync annotation
+  - Client KLV support
+
+---
+
+### Migration idea
+![](images/image_flow.drawio.png)
