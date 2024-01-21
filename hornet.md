@@ -106,17 +106,33 @@ theme: uncover
 - Try to use common name from community
   
 ---
-### Echo System
-
----
+### ROS echo
+- Process monitoring
+- Diagnostics standard
+- Logging 
+- Records (ROS bug)
+- dev Tools
+  - rqt
+  - rviz
+  - gazebo
+- PlotJuggler
+  
 ### DDS
+- DDS Not cross the LAN
+  - Use bridge like ZENOH
+- DDS Discovery counting 
+- use shm if possible
+- use zero copy / loan for big messages
 
 ---
 ### Development Standard
--  deb (dependency)
--  docker
--  documentation (README.md)
--  test ?
+-  code 
+   -  python / cpp
+-  tests
+-  packaging
+   -  deb (with dependencies)
+   -  docker
+-  documentation (not just a README file)
 
 ---
 ### Migration Process
