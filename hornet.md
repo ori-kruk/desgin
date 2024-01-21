@@ -74,18 +74,37 @@ theme: uncover
 - DDS Vendor (fast rtps / cyclonDDS)
 
 ---
+### ROS verbs
+- Nodes
+- Topics and Messages
+- Pub/Sub
+- Service: RPC
+- Action: long time service
+- Parameters: config node behavior
+
 ### Nodes
-- as small as possible
-- 
+- Units of work
+- for example
+  - camera capture
+  - camera control
+  - tracker
+  - streaming
+  - gpio control
 
 ---
 ### Messages
+- Units of data
+  - not mixing data that not from the same domain
 - as many as needed
 - use standard msgs
 
 ---
-### Parameters
-
+### Topic
+- Declarative
+- Namespace
+- Try to use common name from community
+  
+---
 ---
 ### Echo System
 
