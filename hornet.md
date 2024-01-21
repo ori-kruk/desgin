@@ -20,7 +20,7 @@ theme: uncover
 - Main Design Principles
   - Setup Definition
   - ROS
-    - Nodes, Messages, Parameters
+    - Verbs: Nodes, Messages, Parameters
     - Echo System
     - DDS
   - Development Standard
@@ -74,7 +74,7 @@ theme: uncover
 - DDS Vendor (fast rtps / cyclonDDS)
 
 ---
-### ROS verbs
+### ROS Verbs
 - Nodes
 - Topics and Messages
 - Pub/Sub
@@ -100,11 +100,10 @@ theme: uncover
 
 ---
 ### Topic
-- Declarative
 - Namespace
+- Declarative
 - Try to use common name from community
   
----
 ---
 ### Echo System
 
