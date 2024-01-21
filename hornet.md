@@ -54,7 +54,8 @@ theme: uncover
   - Bridge can always be used as a legitimate solution
 - "Don't invent the wheel..."
 - Design must consider **Testability**
-- System resources are limited (network, cpu, memory)
+- System resources are limited
+  - network, cpu, memory
   
 ---
 ### Setup Definition
@@ -83,9 +84,10 @@ theme: uncover
 - Action: long time service
 - Parameters: config node behavior
 
+---
 ### Nodes
 - Units of work
-- for example
+- Example:
   - camera capture
   - camera control
   - tracker
@@ -95,34 +97,37 @@ theme: uncover
 ---
 ### Messages
 - Units of data
-  - not mixing data that not from the same domain
-- as many as needed
-- use standard msgs
+  - Do not mix data from different domains
+- As many as needed
+- Try to use standard msgs
 
 ---
 ### Topic
 - Namespace
-- Declarative
+- Meaningful names
 - Try to use common name from community
+- Example:
+  - boson/camera, boson/camera_info
+  - next_vision/camera, next_vision/camera_info
   
 ---
 ### ROS echo
 - Process monitoring
 - Diagnostics standard
 - Logging 
-- Records (ROS bug)
+- Records (ROS bag)
 - dev Tools
   - rqt
   - rviz
   - gazebo
-- PlotJuggler
-  
+  - PlotJuggler
+
+---
 ### DDS
-- DDS Not cross the LAN
-  - Use bridge like ZENOH
-- DDS Discovery counting 
-- use shm if possible
-- use zero copy / loan for big messages
+- DDS exists within LAN only
+  - Use bridges (ZENOH) to cross between LANs
+- Consider DDS Discovery
+- Use shm if possible (shared memory)
 
 ---
 ### Development Standard
@@ -132,7 +137,15 @@ theme: uncover
 -  packaging
    -  deb (with dependencies)
    -  docker
--  documentation (not just a README file)
+-  documentation
+   -  Code general description
+   -  Interface
+   -  Install & Usage
+
+---
+### Resource & Performance
+- Use zero copy / loan for big messages
+- System test case
 
 ---
 ### Migration Process
