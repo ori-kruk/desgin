@@ -19,16 +19,18 @@ theme: uncover
 # Agenda
 - Main Design Principles
   - Setup Definition
-  - Nodes
-  - Messages
-  - Parameters
-  - Standard
+  - ROS
+    - Nodes, Messages, Parameters
+    - Echo System
+    - DDS
+  - Development Standard
 
 ---
 # Agenda
 - Migration Process
   - Home <--> Field
   - Work Method
+  - On going migration
 
 ---
 ### State Machine
@@ -47,10 +49,29 @@ theme: uncover
 ![](images/control.drawio.png)
 
 ---
+### Design Zen
+- Ros is only a way of implementation
+  - Bridge can always be used as a legitimate solution
+- "Don't invent the wheel..."
+- Design must consider **Testability**
+- System resources are limited (network, cpu, memory)
+  
+---
 ### Setup Definition
-- Ubuntu22
-- RosHumble
-- DDS Vendor
+##### Hardware
+- Rom Box III (Jetson Orin)
+- [New Gimbal](https://gremsy.com/gremsy-introduces-two-axis-mio-gimbal-for-drone-developers)
+- New Sensors:
+  - temp, range, proximity, stereo (point cloud)
+  
+![bg 30%](images/two-axis_mio_gimbal.png)
+
+---
+### Setup Definition
+##### Software
+- Ubuntu LTS latest (22.04)
+- ROS LTS latest (Humble)
+- DDS Vendor (fast rtps / cyclonDDS)
 
 ---
 ### Nodes
@@ -66,7 +87,13 @@ theme: uncover
 ### Parameters
 
 ---
-### Standard
+### Echo System
+
+---
+### DDS
+
+---
+### Development Standard
 -  deb (dependency)
 -  docker
 -  documentation (README.md)
@@ -84,3 +111,8 @@ Field <--------------------------------> Home
 - Implementation
 - Tests
 - Integration
+
+---
+### On going migration
+- Partial test on exist system
+- Run as Payload
