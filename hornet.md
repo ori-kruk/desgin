@@ -1,6 +1,6 @@
 ---
-title: Hornet desgin
-description: ROS2
+title: 'Rome' System Design
+description: ROS2 Orientation
 marp: true
 # size: 16:9
 paginate: true
@@ -11,7 +11,7 @@ theme: uncover
 - Current System Design
   - State Machine
   - Mavlink Routing
-- New System Architecture
+- **'Rome'** System Architecture
   - General Design
   - Control Design
 
@@ -34,7 +34,7 @@ theme: uncover
 
 ---
 ### State Machine
-![image]()
+![image](images/state_machine.drawio.png)
 
 ---
 ### Mavlink Routing
@@ -60,9 +60,9 @@ theme: uncover
 ---
 ### Setup Definition
 ##### Hardware
-- Rom Box III
-  - Jetson Orin
-- [New Gimbal](https://gremsy.com/gremsy-introduces-two-axis-mio-gimbal-for-drone-developers)
+- RomBox-III new architecture
+  - Includes Jetson Orin
+- [Gimbal: Gremsy two-axis-mio](https://gremsy.com/gremsy-introduces-two-axis-mio-gimbal-for-drone-developers)
 - New Sensors:
   - temp, range, proximity, stereo (point cloud)
   
@@ -125,9 +125,9 @@ theme: uncover
 ---
 ### DDS
 - DDS exists within LAN only
-  - Use bridges (ZENOH) to cross between LANs
+  - Use bridges to cross between LANs (ZENOH)
 - Consider DDS Discovery
-- Use shm if possible (shared memory)
+- Use SHM if possible (Shared Memory)
 
 ---
 ### Development Standard
@@ -149,7 +149,7 @@ theme: uncover
 
 ---
 ### Migration Process
-Field <--------------------------------> Home
+      Field <----------------------------------> Home
 ![](images/domains.drawio.png)
 
 ---
@@ -177,6 +177,7 @@ Use case to migration current implementation to ROS base
   - Client KLV support
 
 ---
-
 ### Migration idea
 ![](images/image_flow.drawio.png)
+- Partial test, on exist system
+- RomBox-III, Run as a Payload
