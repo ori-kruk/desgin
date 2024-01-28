@@ -8,9 +8,12 @@ theme: uncover
 
 ---
 # Agenda
-- Current System Design
-  - State Machine
-  - Mavlink Routing
+- Rom System Definition & Design
+  - Description
+  - Main Idea/Goal
+  - main ideas to keep
+    - State Machine
+    - Mavlink Routing
 - **'Rome'** System Architecture
   - General Design
   - Control Design
@@ -33,19 +36,29 @@ theme: uncover
   - On going migration
 
 ---
-### State Machine
+### Rom System
+- **Main Goal**
+  - To enable mission in a Non-GPS environment
+    - To be autonomous as much as possible
+    - Implement maximum automation
+- **Description:** Add on KIT
+  - Companion Computer (rombox) + Gimbal + Camera
+    - Communicates with Pixhawk via Mavlink Protocol
+
+---
+### State Machine (to keep)
 ![image](images/state_machine.drawio.png)
 
 ---
-### Mavlink Routing
+### Mavlink Routing (to keep)
 ![](images/pix_cc_gcs_block.drawio.png)
 
 ---
-### General Design
+### "Rome" General Design
 ![](images/general_design.drawio.png)
 
 ---
-### Control Design
+### "Rome" Control Design
 ![](images/control.drawio.png)
 
 ---
@@ -82,12 +95,17 @@ theme: uncover
 - Pub/Sub
 - Service: RPC
 - Action: long time service
-- Parameters: config node behavior
+- Parameters:
+  - Config nodes behavior
+  - A persist mechanism need to be implemented
 
 ---
 ### Nodes
 - Units of work
-- Example:
+  - Deals with a specific functionality
+  - Expose its own interface:
+    - topics and params
+- Examples:
   - camera capture
   - camera control
   - tracker
@@ -103,7 +121,7 @@ theme: uncover
 
 ---
 ### Topic
-- Namespace
+- Namespace (topic source)
 - Meaningful names
 - Try to use common name from community
 - Example:
@@ -111,7 +129,7 @@ theme: uncover
   - next_vision/camera, next_vision/camera_info
   
 ---
-### ROS echo
+### ROS Echo System
 - Process monitoring
 - Diagnostics standard
 - Logging 
@@ -144,7 +162,11 @@ theme: uncover
 
 ---
 ### Resource & Performance
-- Use zero copy / loan for big messages
+- Design to meet
+  - msgs qos
+  - msgs frequency
+  - Use zero copy / loan for big messages
+  - Use SHM if possible
 - System test case
 
 ---
@@ -178,5 +200,3 @@ Use case: Migrate current implementation to ROS base
 
 ---
 ![](images/image_flow.drawio.png)
-
----
